@@ -28,8 +28,8 @@ if ($result->num_rows > 0) {
     	echo '<td>' . $row["date_start"] . '</td>';
     	echo '<td>' . $row["date_end"] . '</td>';
     	echo '<td>' . $row["description"] . '</td>';
-        echo '<td> <a href="Approve.php?user_id='.$row["id"].'button type="button" class="btn btn-success">Approve</button></a></td>';
-        echo '<td> <a href="decline.php?user_id='.$row["id"].'button type="button" class="btn btn-danger">Decline</button></a></td>';
+        echo '<td> <a href="applications_approve.php?user_id='.$row["id"].'button type="button" class="btn btn-success">Approve</button></a></td>';
+        echo '<td> <a href="applications_decline.php?user_id='.$row["id"].'button type="button" class="btn btn-danger">Decline</button></a></td>';
     	echo '</tr>';
 
     }
