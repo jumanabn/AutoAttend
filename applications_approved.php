@@ -3,21 +3,16 @@
 <?php require('inc/function.php');?>
 
 <?php
-
+admin_only();
 $page_title = "Leave Applications";
 
 ?>
-<<?php require('layout/header.php'); ?>
-<div>
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Apply for leave</a></div>
-<?php
-admin_only(); ?>
 
-<a href="applications_pending.php">Pending</a> | <a href="applications_approved.php">Approved</a> | <a href="applications_declined.php">Declined</a>
+<?php require('layout/header.php'); ?>
 
 <?php
 
-$sql = "SELECT id, user_id, type, date_start, date_end, description, status FROM leave_applications where status=''";
+$sql = "SELECT id, user_id, type, date_start, date_end, description, status FROM leave_applications where status='Approved'";
 
 $result = $conn->query($sql);
 
@@ -43,6 +38,9 @@ if ($result->num_rows > 0) {
 } else {
     echo '<div class="alert alert-warning" role="alert">No Record Found</div>';
 }
+
 ?>
 
-<?php require('layout/footer.php'); ?>
+
+
+<?php require('layout/footer.php') ?>

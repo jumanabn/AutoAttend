@@ -44,10 +44,10 @@
               <span data-feather="file"></span>
              Edit Profile
             </a>
-          </li>
+          </li>      
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/applications_pending.php">
-              <span data-feather="shopping-cart"></span>
+              <span data-feather="file"></span>
               Leave Application
             </a>
           </li>
